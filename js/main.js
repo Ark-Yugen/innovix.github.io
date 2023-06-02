@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     let characterIndex = 0;
 
-    let titleNames = ["o", "os", "oss", "ossi", "ossia", "ossian", "ossians", "ossians.", "ossians.s", "ossians.se", "ossians.s", "ossians.", "ossians", "ossian", "ossia", "ossi", "oss", "os"];
+    let titleNames = ["S", "Sa", "Sat", "Sate", "Satye", "Satyen", "Satyen'", "Satyen's ", "Satyen's I", "Satyen's In", "Satyen's Inn", "Satyen's Inno", "Satyen's Innov", "Satyen's Innovi", "Satyen's Innovix", "Satyen's Innovix ", "Satyen's Innovix I", "Satyen's Innovix In", "Satyen's Innovix Ins", "Satyen's Innovix Inst", "Satyen's Innovix Insti", "Satyen's Innovix Instit", "Satyen's Innovix Institu", "Satyen's Innovix Institu", "Satyen's Innovix Instit", "Satyen's Innovix Insti", "Satyen's Innovix Inst", "Satyen's Innovix Ins", "Satyen's Innovix In", "Satyen's Innovix I", "Satyen's Innovix"];
 
     window.updateTitleName = function () {
         document.getElementsByTagName("title")[0].innerHTML = titleNames[characterIndex++ % titleNames.length];
@@ -28,6 +28,6 @@ $(document).ready(function(){
 
     setInterval(() => {
         window.updateTitleName()
-    }, 500);
+    }, 100);
     
-})
+});

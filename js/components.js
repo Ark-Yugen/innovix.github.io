@@ -22,7 +22,7 @@ function ProjectList() {
   }), React.createElement(Project, {
     img: "images/ReactionTest_IMG.PNG",
     caption: "reaction test",
-    url: "reaction-test.html"
+    url: "/reaction-test/reaction-test.html"
   }), React.createElement(Project, {
     img: "images/CalcRN.png",
     caption: "calculator rn",

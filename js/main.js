@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     let characterIndex = 0;
 
-    let titleNames = ["i", "in", "inn", "inno", "innov", "innovi", "innovix", "innovi", "innov", "inno", "inn", "in"];
+    let titleNames = ["I", "In", "Inn", "Inno", "Innov", "Innovi", "Innovix", "Innovi", "Innov", "Inno", "Inn", "In"];
 
     window.updateTitleName = function () {
         document.getElementsByTagName("title")[0].innerHTML = titleNames[characterIndex++ % titleNames.length];
@@ -28,6 +28,6 @@ $(document).ready(function(){
 
     setInterval(() => {
         window.updateTitleName()
-    }, 400);
+    }, 500);
     
 })

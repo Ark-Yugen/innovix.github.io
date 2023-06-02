@@ -24,9 +24,9 @@ function ProjectList() {
     caption: "reaction test",
     url: "reaction-test/reaction-test.html"
   }), React.createElement(Project, {
-    img: "images/Flappy_Bird.png",
-    caption: "Flappy Bird",
-    url: "flappy-bird/flappy-bird.html"
+    img: "images/Tic-Tac-Toe.png",
+    caption: "Tic Tac Toe",
+    url: "tic-tac-toe/tic-tac-toe.html"
   }));
 }
 

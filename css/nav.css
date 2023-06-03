@@ -1,61 +1,83 @@
 #nav-ul {
     transition: 0.4s;
     line-height: 100px;
-}
-
-.show-menu-btn, .hide-menu-btn {
+  }
+  
+  .show-menu-btn,
+  .hide-menu-btn {
     transition: 0.4s;
     font-size: 4vh;
     cursor: pointer;
     display: none;
-}
-
-.show-menu-btn:hover, .hide-menu-btn:hover {
+  }
+  
+  .show-menu-btn:hover,
+  .hide-menu-btn:hover {
     color: #0be811;
-}
-
-.show-menu-btn {
+  }
+  
+  .show-menu-btn {
     float: right;
-}
-
-.show-menu-btn i {
+  }
+  
+  .show-menu-btn i {
     line-height: 100px;
     padding-right: 35px;
-}
-
-#chk {
+  }
+  
+  #chk {
     position: absolute;
     visibility: hidden;
     display: inline;
-}
-
-@media screen and (max-width: 650px) {
-    .show-menu-btn, .hide-menu-btn {
-        display: block;
-    }
-
-    #nav-ul {
-        position: fixed;
-        width: 100%;
-        height: 5vh;
-        background: #1e272e;
-        right: -110%;
-        top: 0;
-        text-align: center;
-        padding: 80px 0;
-        line-height: normal;
-        transition: 0.7s;
-        border-radius: 0 0 0 40px;
-        box-shadow: 0 0 10px 4px #34495e;
-    }
-    
+  }
+  
+  @media screen and (max-width: 650px) {
+    .show-menu-btn,
     .hide-menu-btn {
-        position: absolute;
-        top: 40px;
-        right: 40px;
+      display: block;
     }
-    
-    #chk:checked ~ #nav-ul {
-        right: 0;
+  
+    #nav-ul {
+      position: fixed;
+      width: 100%;
+      height: auto;
+      background: #1e272e;
+      right: -100%;
+      top: 0;
+      text-align: center;
+      padding: 80px 0;
+      line-height: normal;
+      transition: 0.7s;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 0 10px 4px #34495e;
+      z-index: 1;
     }
-}
+  
+    .hide-menu-btn {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+  
+    #nav-ul li {
+      display: block;
+      margin-bottom: 30px;
+    }
+  
+    #nav-ul li a {
+      display: block;
+      font-size: 3vh;
+      color: #d2dae2;
+      padding: 10px;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+  
+    #nav-ul li a:hover {
+      color: #0be811;
+    }
+  
+    #chk:checked + .show-menu-btn ~ #nav-ul {
+      right: 0;
+    }
+  }

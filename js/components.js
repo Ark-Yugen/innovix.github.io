@@ -16,9 +16,9 @@ function ProjectList() {
   return React.createElement("div", {
     id: "img-container"
   }, React.createElement(Project, {
-    img: "images/SnakeXNA_IMG.PNG",
+    img: "images/SnakeXNA_IMG.png",
     caption: "snake xna",
-    url: "https://github.com/occnah/SnakeXNA/tree/master/SnakeXNA"
+    url: "SnakeXNA/SnakeXNA.html"
   }), React.createElement(Project, {
     img: "images/ReactionTest_IMG.PNG",
     caption: "reaction test",

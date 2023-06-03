@@ -1,283 +1,126 @@
-* {
+* { padding: 0; margin: 0; }
+
+:root {
+--base-color: #d2dae2;
+--secondary-color: #0be811;
+}
+
+body {
+background-color: #1e272e;
+font-family: 'Julius Sans One', sans-serif;
+color: var(--base-color);
+overflow: hidden;
+}
+
+body::before{
+content: '';
+position: absolute;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+background-image: url(../images/IMG_2264.JPG);
+background-size: cover;
+background-position: top-center;
+opacity: 0.15;
+filter: blur(7px);
+}
+
+nav, footer, #about-text, #contact-container {
+width: 100%;
+}
+
+nav {
+margin-top: -30px;
+position: fixed;
+top: 0;
+text-align: right;
+z-index: 2;
+}
+
+footer {
+position: fixed;
+bottom: 0;
+padding: 5vh;
+}
+
+#about-text, #sub-header {
+font-size: 2vh;
+}
+
+#main-header, #sub-header {
+text-align: center;
+}
+
+#main-header {
+font-size: 6vh;
+}
+
+#nav-ul {
+padding-right: 5vh;
+}
+
+#sm-ul, #nav-ul {
+list-style-type: none;
+}
+
+#about-header {
+font-size: 4vh;
+}
+
+.center, #contact-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 0;
+}
+
+.sm-logo {
+color: var(--base-color);
+font-size: 3vh;
+transition: 0.2s ease-in;
+}
+
+.sm-logo:hover, .nav-link:hover, .nav-link.selected, .green-detail {
+color: var(--secondary-color);
+}
+
+.sm-li {
+display: inline-block;
+margin-left: 5vh;
+}
+
+.nav-link {
+font-size: 1.5vh;
+cursor: pointer;
+text-decoration: none;
+transition: 0.2s ease-in;
+}
+
+.nav-li {
+display: inline-block;
+margin: 5vh 5vh 0 0;
+}
+
+@media screen and (max-width: 650px) {
+
+stylus
+Copy
+nav, footer, #nav-top, #nav-ul, .nav-link {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --base-color: #d2dae2;
-    --secondary-color: #0be811;
-  }
-  
-  body {
-    background-color: #1e272e;
-    font-family: 'Julius Sans One', sans-serif;
-    color: var(--base-color);
-    overflow: hidden;
-  }
-  
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-image: url(../images/IMG_2264.JPG);
-    background-size: cover;
-    background-position: top-center;
-    opacity: 0.15;
-    filter: blur(7px);
-  }
-  
-  nav,
-  footer,
-  #about-text,
-  #contact-container {
-    width: 100%;
-  }
-  
-  nav {
-    margin-top: -30px;
-    position: fixed;
-    top: 0;
-    text-align: right;
-    z-index: 2;
-  }
-  
-  footer {
-    position: fixed;
-    bottom: 0;
-    padding: 5vh;
-  }
-  
-  #main-header,
-  #sub-header {
+}
+
+#sm-ul, #nav-ul {
     text-align: center;
-  }
-  
-  #main-header {
-    font-size: 6vh;
-  }
-  
-  #sub-header {
-    font-size: 2vh;
-  }
-  
-  #nav-ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5vh;
-  }
-  
-  .nav-li {
-    margin: 5vh 5vh 0 0;
-  }
-  
-  .nav-link {
-    font-size: 1.5vh;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.2s ease-in;
-  }
-  
-  .nav-link.selected, .green-detail {
-    color: var(--secondary-color);
-  }
-  
-  #about-header {
-    font-size: 4vh;
-  }
-  
-  .center,
-  #contact-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-  }
-  
-  .contact-form-text,
-  .contact-form-btn {
-    width: 100%;
-  }
-  
-  .contact-form-text {
-    font-size: 1.2rem;
-  }
-  
-  .contact-form-btn {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
-  
-  .sm-ul,
-  #nav-ul {
-    list-style-type: none;
-  }
-  
-  .sm-logo {
-    color: var(--base-color);
-    font-size: 3vh;
-    transition: 0.2s ease-in;
-  }
-  
-  .sm-logo:hover,
-  .nav-link:hover,
-  .nav-link.selected,
-  .green-detail {
-    color: var(--secondary-color);
-  }
-  
-  .sm-li {
-    margin-left: 5vh;
-  }
-  
-  /* Navigation Icon Styles */
-  .nav-icon {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    cursor: pointer;
-  }
-  
-  .nav-icon span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    background-color: var(--base-color);
-    margin-bottom: 5px;
-    position: relative;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .nav-icon span:nth-child(1) {
-    transform-origin: left center;
-  }
-  
-  .nav-icon span:nth-child(2) {
-    transform-origin: center center;
-  }
-  
-  .nav-icon span:nth-child(3) {
-    transform-origin: left center;
-  }
-  
-  #nav-toggle:checked + .nav-icon span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-  
-  #nav-toggle:checked + .nav-icon span:nth-child(2) {
-    transform: scale(0);
-  }
-  
-  #nav-toggle:checked + .nav-icon span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-  
-  @media screen and (max-width: 768px) {
-    #main-header {
-      font-size: 3rem;
-    }
-  
-    #sub-header {
-      font-size: 1.5rem;
-    }
-  
-    #nav-ul {
-      display: none;
-    }
-  
-    /* Show navigation menu when checkbox is checked */
-    #nav-toggle:checked ~ #nav-ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #1e272e;
-      z-index: 1;
-    }
-  
-    .nav-li {
-      margin: 2vh 0;
-      width: 100%;
-    }
-  
-    .nav-link {
-      font-size: 2rem;
-    }
-  
-    #sm-ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-    }
-  
-    .sm-li {
-      margin: 0 2vh;
-    }
-  
-    #about-header {
-      font-size: 3rem;
-    }
-  
-    #about-text {
-      font-size: 1.2rem;
-    }
-  
-    #contact-header {
-      font-size: 3rem;
-    }
-  
-    .contact-form-text,
-    .contact-form-btn {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
-  
-    .sm-logo {
-      font-size: 3rem;
-    }
-  }
-  
-  @media screen and (min-width: 769px) {
-    .nav-li {
-      margin: 5vh 5vh 0 0;
-    }
-  
-    .nav-link {
-      font-size: 1.5vh;
-    }
-  
-    #about-header {
-      font-size: 4vh;
-    }
-  
-    #about-text {
-      font-size: 2vh;
-    }
-  
-    #contact-header {
-      font-size: 4vh;
-    }
-  
-    .contact-form-text,
-    .contact-form-btn {
-      font-size: 1.5vh;
-      margin-top: 1rem;
-    }
-  }
-  
-  /* Hide checkbox input */
-  #nav-toggle {
-    display: none;
-  }
+}
+
+.sm-li {
+    margin: 0 2vh 5vh 2vh;
+}
+
+.nav-li {
+    margin: 5vh 2vh 0 2vh;
+}
+}

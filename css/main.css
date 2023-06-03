@@ -135,6 +135,49 @@
     margin-left: 5vh;
   }
   
+  /* Navigation Icon Styles */
+  .nav-icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer;
+  }
+  
+  .nav-icon span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--base-color);
+    margin-bottom: 5px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .nav-icon span:nth-child(1) {
+    transform-origin: left center;
+  }
+  
+  .nav-icon span:nth-child(2) {
+    transform-origin: center center;
+  }
+  
+  .nav-icon span:nth-child(3) {
+    transform-origin: left center;
+  }
+  
+  #nav-toggle:checked + .nav-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  #nav-toggle:checked + .nav-icon span:nth-child(2) {
+    transform: scale(0);
+  }
+  
+  #nav-toggle:checked + .nav-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
   @media screen and (max-width: 768px) {
     #main-header {
       font-size: 3rem;
@@ -148,7 +191,8 @@
       display: none;
     }
   
-    #chk:checked ~ #nav-ul {
+    /* Show navigation menu when checkbox is checked */
+    #nav-toggle:checked ~ #nav-ul {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -231,4 +275,9 @@
       font-size: 1.5vh;
       margin-top: 1rem;
     }
+  }
+  
+  /* Hide checkbox input */
+  #nav-toggle {
+    display: none;
   }

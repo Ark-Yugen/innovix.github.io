@@ -18,15 +18,15 @@ function ProjectList() {
   }, React.createElement(Project, {
     img: "images/SnakeXNA_IMG.png",
     caption: "snake xna",
-    url: "SnakeXNA/SnakeXNA.html"
+    url: "Extentions/SnakeXNA/SnakeXNA.html"
   }), React.createElement(Project, {
     img: "images/ReactionTest_IMG.PNG",
     caption: "reaction test",
-    url: "reaction-test/reaction-test.html"
+    url: "Extentions/reaction-test/reaction-test.html"
   }), React.createElement(Project, {
     img: "images/Tic-Tac-Toe.png",
     caption: "Tic Tac Toe",
-    url: "tic-tac-toe/tic-tac-toe.html"
+    url: "Extentions/tic-tac-toe/tic-tac-toe.html"
   }));
 }
 

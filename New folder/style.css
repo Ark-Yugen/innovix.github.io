@@ -162,24 +162,6 @@ nav ul {
         font-family: var(--ff-main);
         margin-right: 0.6rem;
     }
-    .search-container {
-        display: flex;
-        align-items: center;
-      }
-      
-      .search-input {
-        width: 200px;
-        height: 30px;
-        padding: 5px;
-        background-color: #ffffff;
-      }
-      
-      .search-icon {
-        margin-left: 5px;
-        cursor: pointer;
-      }
-      
-
 
     .search-container i {
         width: 2.8rem;

@@ -141,6 +141,37 @@ nav ul {
         height: 95px;
     }
 
+    .zoro-side-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+    
+    /* Add this media query to your existing CSS */
+    @media (max-width: 767px) {
+        .zoro-side-img {
+          display: none;
+        }
+        .top-content {
+          background-image: linear-gradient(
+              to bottom,
+              rgba(32, 33, 37, 1) 1%,
+              rgba(32, 33, 37, 0.6) 20%,
+              rgba(32, 33, 37, 0.1) 79%
+            ),
+            url(img/zoro-bg.jpg);
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    
+    
+
 .search-container {
     text-align: center;
     font-family: var(--ff-main);
@@ -649,3 +680,35 @@ footer {
         height: 400px;
     }
 }
+
+.footer-section.contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+ .social-media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Center the icons vertically */
+  gap: 10px; /* Add some spacing between the icons */
+}
+
+.social-media a {
+  font-size: 24px; /* Increase the icon size */
+  padding: 5px; /* Add padding around the icons */
+}
+
+@media (max-width: 768px) {
+  .social-media {
+    justify-content: center; /* Center the icons on smaller screens */
+    padding: 10px; /* Add padding to the social media container */
+  }
+
+  .social-media a {
+    padding: 3px; /* Adjust the padding for smaller screens */
+  }
+}
+
+  
+  

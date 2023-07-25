@@ -11,7 +11,7 @@ mobileNavToggle.addEventListener("click", function(){
 
 function searchAnime() {
     var searchTerm = document.getElementById('search-input').value;
-    var searchURL = 'https://zoro.to/search?keyword=' + searchTerm;
+    var searchURL = 'https://aniwatch.to//search?keyword=' + searchTerm;
     window.location.href = searchURL;
   }
   
@@ -21,7 +21,7 @@ searchForm.addEventListener("submit", function(event) {
 
     const keyword = searchInput.value.trim(); // Get the entered keyword
     if (keyword !== "") {
-        const searchURL = "https://zoro.to/search?keyword=" + encodeURIComponent(keyword);
+        const searchURL = "https://aniwatch.to//search?keyword=" + encodeURIComponent(keyword);
         window.location.href = searchURL; // Redirect to the search URL
     }
 });
